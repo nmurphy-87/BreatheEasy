@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/landingFragment">
+
+    <!-- GLOBAL ACTION TO ALLOW US TO NAVIGATE TO TRACKING FRAGMENT FROM WHEREVER WE ARE -->
+    <!-- SETTING 'launchSingleTop' TO TRUE STOPS OUR FRAGMENTS AND VIEWS BEING REINITIALISED AND LOSING THEIR DATA WHEN TRACKING FRAGMENT LAUNCHED FROM NOTIFICATION -->
+    <action android:id="@+id/action_global_trackingFragment"
+        app:destination="@+id/trackingFragment"
+        app:launchSingleTop="true"/>
+
+    <fragment
+        android:id="@+id/runFragment"
+        android:name="com.example.breatheeasy.userinterface.fragments.RunFragment"
+        android:label="RunFragment" >
+        <action
+            android:id="@+id/action_runFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.example.breatheeasy.userinterface.fragments.TrackingFragment"
+        android:label="TrackingFragment" >
+        <action
+            android:id="@+id/action_trackingFragment_to_runFragment"
+            app:destination="@id/runFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.breatheeasy.userinterface.fragments.StatsFragment"
+        android:label="StatsFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.breatheeasy.userinterface.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.example.breatheeasy.userinterface.fragments.LandingFragment"
+        android:label="LandingFragment" >
+        <action
+            android:id="@+id/action_landingFragment_to_runFragment"
+            app:destination="@id/runFragment" />
+    </fragment>
+</navigation>
