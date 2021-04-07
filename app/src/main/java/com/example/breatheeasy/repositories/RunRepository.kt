@@ -1,10 +1,10 @@
 package com.example.breatheeasy.repositories
 
-import com.example.breatheeasy.database.Run
-import com.example.breatheeasy.database.RunDAO
+import com.example.breatheeasy.data.databases.run.Run
+import com.example.breatheeasy.data.databases.run.RunDAO
 import javax.inject.Inject
 
-class MainRepository @Inject constructor(
+class RunRepository @Inject constructor(
     val runDAO: RunDAO
 ) {
 

@@ -1,7 +1,9 @@
-package com.example.breatheeasy.database
+package com.example.breatheeasy.data.databases.run
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+
+// Data Access Object to provide CRUD functionality on our 'Run' database
 
 @Dao
 interface RunDAO {

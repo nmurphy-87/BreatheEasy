@@ -2,8 +2,10 @@ package com.example.breatheeasy.dependencyinjection
 
 import android.content.Context
 import androidx.room.Room
+import com.example.breatheeasy.additional.ContantValues.CURRENT_CONDITIONS_DATABASE_NAME
 import com.example.breatheeasy.additional.ContantValues.RUN_DATABASE_NAME
-import com.example.breatheeasy.database.RunDatabase
+import com.example.breatheeasy.data.databases.conditions.CurrentConditionsDatabase
+import com.example.breatheeasy.data.databases.run.RunDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,4 +31,5 @@ object AppModule {
     @Singleton
     @Provides
     fun provideRunDAO(database: RunDatabase) = database.getRunDAO()
+
 }

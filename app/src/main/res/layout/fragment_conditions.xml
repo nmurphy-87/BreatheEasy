@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -13,10 +14,10 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5"/>
     <TextView
-        android:id="@+id/tvSettings"
+        android:id="@+id/tvConditions"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Settings Fragment" />
+        android:text="Conditions Fragment" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

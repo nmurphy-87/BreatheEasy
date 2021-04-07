@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.breatheeasy.R
 import com.example.breatheeasy.additional.TrackingUtility
-import com.example.breatheeasy.database.Run
+import com.example.breatheeasy.data.databases.run.Run
 import kotlinx.android.synthetic.main.display_run.view.*
 import java.text.SimpleDateFormat
 import java.util.*

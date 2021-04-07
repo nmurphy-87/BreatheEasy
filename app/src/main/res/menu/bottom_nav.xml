@@ -2,11 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/runFragment"
-        android:title="Your Runs"
+        android:title="Your Routes"
         android:icon="@drawable/ic_runs"/>
 
+    <item android:id="@+id/conditionsFragment"
+        android:title="Conditions"
+        android:icon="@drawable/ic_air_quality"/>
+
     <item android:id="@+id/statsFragment"
-        android:title="Home"
+        android:title="Statistics"
         android:icon="@drawable/ic_home"/>
 
     <item android:id="@+id/settingsFragment"

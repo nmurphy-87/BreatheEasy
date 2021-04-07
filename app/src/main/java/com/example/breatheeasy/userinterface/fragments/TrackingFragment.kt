@@ -15,7 +15,7 @@ import com.example.breatheeasy.additional.ContantValues.MAP_ZOOM
 import com.example.breatheeasy.additional.ContantValues.POLYLINE_COLOR
 import com.example.breatheeasy.additional.ContantValues.POLYLINE_WIDTH
 import com.example.breatheeasy.additional.TrackingUtility
-import com.example.breatheeasy.database.Run
+import com.example.breatheeasy.data.databases.run.Run
 import com.example.breatheeasy.services.Polyline
 import com.example.breatheeasy.services.TrackingService
 import com.example.breatheeasy.userinterface.viewmodels.MainViewModel

@@ -1,4 +1,4 @@
-package com.example.breatheeasy.database
+package com.example.breatheeasy.data.databases.run
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory

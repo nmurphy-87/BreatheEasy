@@ -1,8 +1,10 @@
-package com.example.breatheeasy.database
+package com.example.breatheeasy.data.databases.run
 
 import android.graphics.Bitmap
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+
+// A single Run entity (for saving each individual run) for our Room database
 
 @Entity(tableName = "run_table")
 data class Run(

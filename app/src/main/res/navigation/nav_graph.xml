@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/landingFragment">
 
     <!-- GLOBAL ACTION TO ALLOW US TO NAVIGATE TO TRACKING FRAGMENT FROM WHEREVER WE ARE -->
@@ -16,6 +18,16 @@
         <action
             android:id="@+id/action_runFragment_to_trackingFragment"
             app:destination="@id/trackingFragment" />
+        <action
+            android:id="@+id/action_runFragment_to_conditionsFragment3"
+            app:destination="@id/conditionsFragment" />
+        <action
+            android:id="@+id/action_runFragment_to_statsFragment"
+            app:destination="@id/statsFragment" />
+        <action
+            android:id="@+id/action_runFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/trackingFragment"
@@ -30,6 +42,11 @@
         android:name="com.example.breatheeasy.userinterface.fragments.StatsFragment"
         android:label="StatsFragment" />
     <fragment
+        android:id="@+id/conditionsFragment"
+        android:name="com.example.breatheeasy.userinterface.fragments.ConditionsFragment"
+        android:label="fragment_conditions"
+        tools:layout="@layout/fragment_conditions" />
+    <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.breatheeasy.userinterface.fragments.SettingsFragment"
         android:label="SettingsFragment" />
@@ -41,4 +58,5 @@
             android:id="@+id/action_landingFragment_to_runFragment"
             app:destination="@id/runFragment" />
     </fragment>
+
 </navigation>
