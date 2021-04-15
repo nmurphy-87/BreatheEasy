@@ -1,10 +1,11 @@
-package com.example.breatheeasy.data.databases.conditions
+package com.example.breatheeasy.data.databases.conditions.current
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.breatheeasy.additional.ContantValues.CURRENT_CONDITIONS_PK
 
 
 @Dao

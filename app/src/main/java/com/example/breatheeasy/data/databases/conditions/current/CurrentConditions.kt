@@ -1,14 +1,13 @@
-package com.example.breatheeasy.data.databases.conditions
+package com.example.breatheeasy.data.databases.conditions.current
 
 
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.breatheeasy.data.APIData.APIResponse.AirQuality
-import com.example.breatheeasy.data.APIData.APIResponse.Condition
+import com.example.breatheeasy.additional.ContantValues.CURRENT_CONDITIONS_PK
+import com.example.breatheeasy.data.APIData.CurrentConditionsResponse.AirQuality
+import com.example.breatheeasy.data.APIData.CurrentConditionsResponse.Condition
 import com.google.gson.annotations.SerializedName
-
-const val CURRENT_CONDITIONS_PK = 0
 
 @Entity(tableName = "current_conditions")
 data class CurrentConditions(

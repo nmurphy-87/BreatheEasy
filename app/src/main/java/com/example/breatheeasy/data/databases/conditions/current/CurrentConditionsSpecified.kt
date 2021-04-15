@@ -1,4 +1,4 @@
-package com.example.breatheeasy.data.databases.conditions
+package com.example.breatheeasy.data.databases.conditions.current
 
 import androidx.room.ColumnInfo
 

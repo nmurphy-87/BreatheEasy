@@ -1,4 +1,4 @@
-package com.example.breatheeasy.data.APIData.APIResponse
+package com.example.breatheeasy.data.APIData.CurrentConditionsResponse
 
 
 data class Condition(

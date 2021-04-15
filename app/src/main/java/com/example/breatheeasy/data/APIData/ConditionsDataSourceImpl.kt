@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.breatheeasy.additional.NoNetworkConnectionException
-import com.example.breatheeasy.data.APIData.APIResponse.WeatherAndAirQualityAPIResponse
+import com.example.breatheeasy.data.APIData.CurrentConditionsResponse.WeatherAndAirQualityAPIResponse
 
 class ConditionsDataSourceImpl (
     private val weatherAndAirQualityAPIService: WeatherAndAirQualityAPIService

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Device Location">
+        <SwitchPreference
+            android:key="ALLOW_DEVICE_LOCATION"
+            android:title="Turn on device location"
+            android:summary="Turn on device location to allow run tracking and conditions forecasts"
+            android:defaultValue="true"
+            android:disableDependentsState="true"/>
+        <SwitchPreference
+            android:key="SET_DEFAULT_LOCATION"
+            android:title="Set Default Location"
+            android:summary="Set default location for conditions should app be unable to get device location"
+            android:defaultValue="true"
+            android:disableDependentsState="true"/>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

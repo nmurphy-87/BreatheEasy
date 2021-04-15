@@ -4,8 +4,13 @@ import android.graphics.Color
 
 object ContantValues {
 
+    //SHARED PREFERENCES
+    const val DEVICE_LOCATION_KEY = "ALLOW_DEVICE_LOCATION"
+    const val DEFAULT_LOCATION_NAME = "SET_DEFAULT_LOCATION"
+
+    //DATABASE NAMING
     const val RUN_DATABASE_NAME = "run_db"
-    const val CURRENT_CONDITIONS_DATABASE_NAME = "current_conditions.db"
+    const val CONDITIONS_LOCATION_DATABASE_NAME = "conditions_location.db"
 
     const val LOCATION_PERMISSION_REQUEST_CODE = 0
 
@@ -33,8 +38,15 @@ object ContantValues {
     // WEATHER & AIR QUALITY API
     const val API_SERVICE_KEY = "39a4da9d4bb449b2840152921211202"
     const val API_SERVICE_BASE_QUERY_URL = "https://api.weatherapi.com/v1/"
+
+    //CURRENT CONDITIONS DB
     const val CURRENT_WEATHER_ID = 0
+    const val CURRENT_CONDITIONS_PK = 0
+    const val CURRENT_CONDITIONS_DATABASE_NAME = "current_conditions.db"
     const val AIR_QUALITY_INDEX_AFFIRM = "yes"
+
+    //CONDITIONS LOCATION
+    const val CONDITION_LOCATION_PK = 0
 
 
 }

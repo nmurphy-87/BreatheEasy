@@ -1,4 +1,4 @@
-package com.example.breatheeasy.data.APIData.APIResponse
+package com.example.breatheeasy.data.APIData.ForecastResponse
 
 
 import com.google.gson.annotations.SerializedName

@@ -3,7 +3,7 @@ package com.example.breatheeasy.data.APIData
 import com.example.breatheeasy.additional.ContantValues.AIR_QUALITY_INDEX_AFFIRM
 import com.example.breatheeasy.additional.ContantValues.API_SERVICE_BASE_QUERY_URL
 import com.example.breatheeasy.additional.ContantValues.API_SERVICE_KEY
-import com.example.breatheeasy.data.APIData.APIResponse.WeatherAndAirQualityAPIResponse
+import com.example.breatheeasy.data.APIData.CurrentConditionsResponse.WeatherAndAirQualityAPIResponse
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
