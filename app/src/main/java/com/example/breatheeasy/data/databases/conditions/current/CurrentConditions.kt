@@ -14,13 +14,10 @@ data class CurrentConditions(
     @SerializedName("air_quality")
     @Embedded(prefix = "airQuality_")
     val airQuality: AirQuality,
-    val cloud: Int,
     @Embedded(prefix = "condition_")
     val condition: Condition,
     @SerializedName("feelslike_c")
     val feelslikeC: Double,
-    @SerializedName("feelslike_f")
-    val feelslikeF: Double,
     val humidity: Int,
     @SerializedName("is_day")
     val isDay: Int,
@@ -30,8 +27,6 @@ data class CurrentConditions(
     val precipMm: Double,
     @SerializedName("temp_c")
     val tempC: Double,
-    @SerializedName("temp_f")
-    val tempF: Double,
     val uv: Double,
     @SerializedName("vis_km")
     val visKm: Double,

@@ -83,8 +83,12 @@ class LocationProviderImpl(
     }
 
     private fun hasDefaultLocationChanged(lastConditionsLocation: ConditionsLocation) :Boolean {
-        val defaultLocationName = getDefaulLocationName()
-        return defaultLocationName!= lastConditionsLocation.name
+
+        if(!isUsingDeviceLocation()) {
+            val defaultLocationName = getDefaulLocationName()
+            return defaultLocationName!= lastConditionsLocation.name
+        }
+        return false
     }
 
 

@@ -48,5 +48,7 @@ object ContantValues {
     //CONDITIONS LOCATION
     const val CONDITION_LOCATION_PK = 0
 
+    //FORECAST CONDITIONS DB
+    const val FORECAST_DAYS_COUNT = 7
 
 }

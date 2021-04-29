@@ -13,6 +13,4 @@ data class AirQuality(
     @SerializedName("pm2_5")
     val pm25: Double,
     val so2: Double,
-    @SerializedName("us-epa-index")
-    val usEpaIndex: Int
 )

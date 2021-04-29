@@ -8,11 +8,14 @@ import androidx.room.*
 @Dao
 interface RunDAO {
 
+    // INSERT RUN INTO OUR DATABASE AND IF IT ALREADY EXISTS WE DELETE IT
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRun(run: Run)
 
     @Delete
     suspend fun deleteRun(run: Run)
+
+    //QUERIES FOR LISTING RUNS IN OUR RUN FRAGMENT
 
     @Query("SELECT * FROM run_table ORDER BY timestamp DESC")
     fun getAllRunsByDate(): LiveData<List<Run>>
@@ -29,6 +32,7 @@ interface RunDAO {
     @Query("SELECT * FROM run_table ORDER BY distanceInMeters DESC")
     fun getAllRunsByDistance(): LiveData<List<Run>>
 
+    //QUERIES FOR FUTURE STATISTICS FRAGMENT
 
     @Query("SELECT SUM(timeInMilliseconds) FROM run_table")
     fun getTotalTimeInMilliseconds(): LiveData<Long>

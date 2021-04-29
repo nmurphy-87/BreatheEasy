@@ -5,11 +5,11 @@ import com.example.breatheeasy.data.databases.conditions.location.ConditionsLoca
 import com.google.gson.annotations.SerializedName
 
 
-data class WeatherAndAirQualityAPIResponse(
+data class CurrentConditionsResponse(
 
-    //SerializedName annotation used to ensure the currentAPIEntry val corresponds to the 'current' class in the JSON data
+        //SerializedName annotation used to ensure the currentAPIEntry val corresponds to the 'current' class in the JSON data
         @SerializedName("current")
-    val currentConditions: CurrentConditions,
+        val currentConditions: CurrentConditions,
 
         val location: ConditionsLocation
 )

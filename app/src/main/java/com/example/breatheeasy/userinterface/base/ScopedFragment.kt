@@ -2,7 +2,6 @@ package com.example.breatheeasy.userinterface.base
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.breatheeasy.data.APIData.WeatherAndAirQualityAPIService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

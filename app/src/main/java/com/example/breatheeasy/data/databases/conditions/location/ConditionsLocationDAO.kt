@@ -16,4 +16,7 @@ interface ConditionsLocationDAO {
 
     @Query("SELECT * FROM conditions_location WHERE id = $CONDITION_LOCATION_PK")
     fun getLocation(): LiveData<ConditionsLocation>
+
+    @Query("SELECT * FROM conditions_location WHERE id = $CONDITION_LOCATION_PK")
+    fun getLocationNonLive(): ConditionsLocation?
 }

@@ -2,7 +2,6 @@ package com.example.breatheeasy.data.databases.conditions.current
 
 import androidx.room.ColumnInfo
 
-
 data class CurrentConditionsSpecified(
 
     @ColumnInfo(name = "airQuality_co")

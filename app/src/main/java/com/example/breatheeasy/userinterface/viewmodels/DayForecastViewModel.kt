@@ -4,13 +4,14 @@ import androidx.lifecycle.ViewModel
 import com.example.breatheeasy.additional.lazyDeferred
 import com.example.breatheeasy.repositories.ConditionsRepository
 import com.example.breatheeasy.userinterface.base.AbstractConditionsViewModel
+import org.threeten.bp.LocalDate
 
-class ConditionsViewModel(
-    private val conditionsRepository: ConditionsRepository
+class DayForecastViewModel(
+        private val conditionsRepository: ConditionsRepository
 ) : AbstractConditionsViewModel(conditionsRepository) {
 
-    val conditions by lazyDeferred {
-        conditionsRepository.getCurrentConditions()
+    val conditionEntries by lazyDeferred {
+        conditionsRepository.getForecastConditionsList(LocalDate.now())
     }
 
 }

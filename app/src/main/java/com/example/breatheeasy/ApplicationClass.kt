@@ -8,7 +8,9 @@ import com.example.breatheeasy.data.providers.LocationProvider
 import com.example.breatheeasy.data.providers.LocationProviderImpl
 import com.example.breatheeasy.repositories.ConditionsRepository
 import com.example.breatheeasy.repositories.ConditionsRepositoryImpl
+import com.example.breatheeasy.services.WeatherAndAirQualityAPIService
 import com.example.breatheeasy.userinterface.viewmodels.ConditionsViewModelFactory
+import com.example.breatheeasy.userinterface.viewmodels.DayForecastViewModelFactory
 import com.google.android.gms.location.LocationServices
 import com.jakewharton.threetenabp.AndroidThreeTen
 import dagger.hilt.android.HiltAndroidApp
@@ -30,16 +32,20 @@ class ApplicationClass : Application(), KodeinAware {
 
         //
         bind() from singleton { ConditionsDatabase(instance()) }
+
         bind() from singleton { instance<ConditionsDatabase>().getCurrentConditionsDAO()}
         bind() from singleton { instance<ConditionsDatabase>().getConditionsLocationDAO()}
+        bind() from singleton { instance<ConditionsDatabase>().getForecastConditionsDAO()}
+
         bind<ConnectivityInterceptor>() with singleton { ConnectivityInterceptorImpl(instance()) }
         bind() from singleton { WeatherAndAirQualityAPIService(instance()) }
         bind<ConditionsDataSource>() with singleton { ConditionsDataSourceImpl(instance()) }
         bind() from provider { LocationServices.getFusedLocationProviderClient(instance<Context>()) }
         bind<LocationProvider>() with singleton { LocationProviderImpl(instance(), instance()) }
-        bind<ConditionsRepository>() with singleton { ConditionsRepositoryImpl(instance(), instance(), instance(), instance()) }
+        bind<ConditionsRepository>() with singleton { ConditionsRepositoryImpl(instance(), instance(), instance(), instance(), instance()) }
 
         bind() from provider { ConditionsViewModelFactory(instance()) }
+        bind() from provider { DayForecastViewModelFactory(instance()) }
     }
 
     override fun onCreate() {
